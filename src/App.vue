@@ -49,14 +49,12 @@ export default {
       if (checkbox.checked === true) {
         document.documentElement.style.setProperty('--primary', '#252222');
         document.documentElement.style.setProperty('--secondary', '#FFFFFF');
-        document.documentElement.style.setProperty('--ternary', '#42b883');
         for (let i = 0; i < icons.length; i++) {
           icons[i].setAttribute("color", "#ffffff")
         }
       } else {
         document.documentElement.style.setProperty('--primary', '#FFFFFF');
         document.documentElement.style.setProperty('--secondary', '#252222');
-        document.documentElement.style.setProperty('--ternary', '#42b883');
         for (let i = 0; i < icons.length; i++) {
           icons[i].setAttribute("color", "#252222")
         }
@@ -75,28 +73,32 @@ export default {
 }
 
 #overlayMenu {
-  display: none;
-  transition: all 0.5s ease;
+  position: fixed;
+  opacity: 0;
+  top: -1000px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
 }
 
 #overlayMenu.active {
   display: flex;
+  opacity: 1;
+  top: 0;
   justify-content: center;
   align-items: flex-start;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   background: var(--primary);
   z-index: 1;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 #overlayMenu .menuResponsive {
   display: flex;
   flex-direction: column;
-  margin: 100px 30px;
+  margin: 150px 30px;
   width: 100%;
   padding: 20px;
 }
@@ -126,7 +128,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 50px;
   border: 1px solid var(--ternary);
   border-radius: 25px;
   padding: 5px 7px;
@@ -135,7 +137,7 @@ export default {
 
 #nav .menu a {
   font-weight: 400;
-  padding: 5px 25px;
+  padding: 7px 25px;
   border-radius: 20px;
   color: var(--ternary);
   margin: 0 7px;
@@ -145,6 +147,7 @@ export default {
 #nav .menu a.router-link-exact-active {
   color: var(--secondary);
   background: var(--ternary);
+  transition: 0.3s;
 }
 
 #nav .logo {
