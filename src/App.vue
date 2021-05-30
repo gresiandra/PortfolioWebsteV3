@@ -1,4 +1,12 @@
 <template>
+  <div id="overlayMenu">
+    <div class="menuResponsive">
+      <router-link @click="showMenu" :to="{ name: 'Home' }">Home</router-link>
+      <router-link @click="showMenu" :to="{ name: 'About' }">About</router-link>
+      <router-link @click="showMenu" :to="{ name: 'Projects' }">Projects</router-link>
+      <router-link @click="showMenu" :to="{ name: 'Skills' }">Skills</router-link>
+    </div>
+  </div> 
   <div id="nav">
     <div class="logo">
       GFP
@@ -12,23 +20,98 @@
     <div class="toggle">
       <box-icon class="moon" name='moon' flip='horizontal' ></box-icon>
       <label class="switch">
-        <input type="checkbox">
+        <input id="dark" type="checkbox" @click="darkMode">
         <span class="slider round"></span>
       </label>
       <box-icon class="moon1" name='moon'></box-icon>
     </div>
-    <box-icon name='menu-alt-right'></box-icon>
+    <box-icon name='menu-alt-right' @click="showMenu"></box-icon>
   </div>
   <router-view/>
+
 </template>
 
-<style>
+<script>
+export default {
+  methods: {
+    showMenu() {
+      const overlayMenu = document.querySelector('#overlayMenu')
+      overlayMenu.classList.toggle('active')
+    },
+    darkMode() {
+      const checkbox = document.querySelector('#dark');
+      const icons = document.querySelectorAll('box-icon')
+      
+      for (let i = 0; i < icons.length; i++) {
+        icons[i].setAttribute("color", "#ffffff")
+      }
 
+      if (checkbox.checked === true) {
+        document.documentElement.style.setProperty('--primary', '#252222');
+        document.documentElement.style.setProperty('--secondary', '#FFFFFF');
+        document.documentElement.style.setProperty('--ternary', '#42b883');
+        for (let i = 0; i < icons.length; i++) {
+          icons[i].setAttribute("color", "#ffffff")
+        }
+      } else {
+        document.documentElement.style.setProperty('--primary', '#FFFFFF');
+        document.documentElement.style.setProperty('--secondary', '#252222');
+        document.documentElement.style.setProperty('--ternary', '#42b883');
+        for (let i = 0; i < icons.length; i++) {
+          icons[i].setAttribute("color", "#252222")
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#overlayMenu {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+#overlayMenu.active {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--primary);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#overlayMenu .menuResponsive {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 30px;
+  width: 100%;
+  padding: 20px;
+}
+
+#overlayMenu .menuResponsive a {
+  text-decoration: none;
+  color: var(--secondary);
+  margin: 15px auto;
+  width: 100%;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+#overlayMenu .menuResponsive a:hover {
+  color: var(--ternary);
 }
 
 #nav {
@@ -47,6 +130,7 @@
   border: 1px solid var(--ternary);
   border-radius: 25px;
   padding: 5px 7px;
+  background: var(--primary);
 }
 
 #nav .menu a {
@@ -67,6 +151,7 @@
   font-family: 'Rowdies', cursive;
   font-size: 26px;
   font-weight: 700;
+  color: var(--secondary);
 }
 
 #nav .toggle {
@@ -85,7 +170,6 @@
   height: 40px;
 }
 
- /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -127,11 +211,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--ternary);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--secondary);
+  background-color: #42b883;
 }
 
 input:checked + .slider:before {
@@ -163,6 +243,7 @@ input:checked + .slider:before {
   #nav box-icon[name="menu-alt-right"] {
     display: block;
     cursor: pointer;
+    z-index: 2;
   }
 
 }
@@ -184,5 +265,4 @@ input:checked + .slider:before {
     display: inline;
   }
 }
-
 </style>
