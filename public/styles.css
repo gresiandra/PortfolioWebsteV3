@@ -1,0 +1,12 @@
+:root {
+    --primary: #FFFFFF;
+    --secondary: #252222;
+    --ternary: #42b883;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
