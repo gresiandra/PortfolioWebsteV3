@@ -4,7 +4,7 @@
       <div class="img"></div>
       <div class="descriptions">
         <h1>gresiandra <br> putra.</h1>
-        <p>{{ summary }}</p>
+        <p>{{ $store.state.summary }}</p>
         <div class="clickables">
           <button><a href="mailto:gresiandra@gmail.com">Email me</a></button>
           <div class="links">
@@ -22,11 +22,6 @@
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      summary: 'Hello! I’m a Web Developer living in Indonesia. Specializing in Front-End Development using some latest technology including Vue.js'
-    }
-  }
 }
 </script>
 
@@ -45,7 +40,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 370px;
   }
 
   .content .img {
@@ -123,10 +118,6 @@ export default {
 
   @media screen and (max-width: 850px) {
 
-    .content {
-      max-height: 450px;
-    }
-
     .content .descriptions h1 {
       font-size: 56px;
     }
@@ -150,7 +141,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 670px) {
     .home {
       margin-top: 50px;
       padding: 50px 20px;

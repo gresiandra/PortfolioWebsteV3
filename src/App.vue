@@ -41,6 +41,8 @@ export default {
     darkMode() {
       const checkbox = document.querySelector('#dark');
       const icons = document.querySelectorAll('box-icon')
+
+      // console.log(icons)
       
       for (let i = 0; i < icons.length; i++) {
         icons[i].setAttribute("color", "#ffffff")
