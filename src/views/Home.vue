@@ -6,11 +6,11 @@
         <h1>gresiandra <br> putra.</h1>
         <p>{{ $store.state.summary }}</p>
         <div class="clickables">
-          <button><a href="mailto:gresiandra@gmail.com">Email me</a></button>
+          <button><a href="../assets/CV-small.pdf" download>Get CV</a></button>
           <div class="links">
             <a href="https://www.linkedin.com/in/gresiandra-putra-972b4120" target="_blank" title="LinkedIn"><box-icon type='logo' name='linkedin-square'></box-icon></a>
             <a href="https://github.com/gresiandra" target="_blank"><box-icon name='github' type='logo' title="Github"></box-icon></a>
-            <a href="https://linktr.ee/gresiandra" target="_blank" title="Linktree"><box-icon name='link' ></box-icon></a>
+            <a href="https://linktr.ee/gresiandra" target="_blank" title="Send Email"><box-icon name='mail-send' ></box-icon></a>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@ export default {
 
   .content .descriptions .clickables box-icon[name="linkedin-square"], 
   .content .descriptions .clickables box-icon[name="github"], 
-  .content .descriptions .clickables box-icon[name="link"] {
+  .content .descriptions .clickables box-icon[name="mail-send"] {
     width: 35px;
     height: 35px;
     margin: 0 10px;
@@ -120,7 +120,7 @@ export default {
   
   .content .descriptions .clickables box-icon[name="linkedin-square"]:hover, 
   .content .descriptions .clickables box-icon[name="github"]:hover, 
-  .content .descriptions .clickables box-icon[name="link"]:hover {
+  .content .descriptions .clickables box-icon[name="mail-send"]:hover {
     transform: translateY(2px);
     transition: all 0.3s ease;
   }
@@ -155,7 +155,7 @@ export default {
 
     .content .descriptions .clickables box-icon[name="linkedin-square"], 
     .content .descriptions .clickables box-icon[name="github"], 
-    .content .descriptions .clickables box-icon[name="link"] {
+    .content .descriptions .clickables box-icon[name="mail-send"] {
       margin: 5px;
     }
   }
@@ -208,7 +208,7 @@ export default {
 
     .content .descriptions .clickables box-icon[name="linkedin-square"], 
     .content .descriptions .clickables box-icon[name="github"], 
-    .content .descriptions .clickables box-icon[name="link"] {
+    .content .descriptions .clickables box-icon[name="mail-send"] {
       margin: 10px;
       margin-bottom: 50px;
     }
