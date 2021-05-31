@@ -61,19 +61,16 @@ export default {
     align-items: center;
   }
 
-  .skills .others .otherSkills {
-    margin-bottom: 50px;
-  }
-
   .skills .development .devSkills p,
   .skills .others .otherSkills p {
-    background: var(--ternary);
+    /* background: var(--ternary); */
     color: var(--secondary);
     font-weight: 400;
     padding: 10px 20px;
     margin: 10px 5px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(66, 184, 131, 0.2);
+    border: 1px solid var(--ternary);
+    box-shadow: 4px 4px 5px rgba(66, 184, 131, 0.2);
     transition: all 0.4s ease;
   }
 

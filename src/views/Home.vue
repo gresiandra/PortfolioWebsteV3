@@ -10,7 +10,7 @@
           <div class="links">
             <a href="https://www.linkedin.com/in/gresiandra-putra-972b4120" target="_blank" title="LinkedIn"><box-icon type='logo' name='linkedin-square'></box-icon></a>
             <a href="https://github.com/gresiandra" target="_blank"><box-icon name='github' type='logo' title="Github"></box-icon></a>
-            <a href="https://linktr.ee/gresiandra" target="_blank" title="Send Email"><box-icon name='mail-send' ></box-icon></a>
+            <a href="mailto:gresiandra@gmail.com" target="_blank" title="Send Email"><box-icon name='mail-send' ></box-icon></a>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default {
     border-radius: 50px;
     font-size: 16px;
     background: var(--ternary);
-    box-shadow: 5px 5px 5px rgba(66, 184, 131, 0.4);
+    box-shadow: 5px 5px 5px rgba(66, 184, 131, 0.2);
     cursor: pointer;
     margin-right: 20px;
   }

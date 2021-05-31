@@ -46,7 +46,7 @@ export default {
     margin-bottom: 120px;
   }
 
-  .projects .project-wrapper .content-wrapper:nth-child(2) {
+  .projects .project-wrapper .content-wrapper:nth-child(even) {
     flex-direction: row-reverse;
     margin-bottom: 120px;
   }
@@ -55,7 +55,7 @@ export default {
     min-width: 300px;
     height: 280px;
     border-radius: 10px;
-    box-shadow: 0px 5px 5px rgba(37, 34, 34, 0.4);
+    box-shadow: 5px 5px 5px rgba(37, 34, 34, 0.4);
   }
 
   .projects .project-wrapper .text-wrapper {
@@ -92,7 +92,7 @@ export default {
   }
 
   @media screen and (max-width: 900px) {
-    .projects .project-wrapper .content-wrapper:nth-child(2),
+    .projects .project-wrapper .content-wrapper:nth-child(even),
     .projects .project-wrapper .content-wrapper {
       flex-direction: column;
       margin-bottom: 0;

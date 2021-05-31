@@ -3,8 +3,8 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     summary: 'Hello! I’m a Web Developer from & living in Indonesia. Specializing in Front-End Development side using some of the latest technology including Vue.js',
-    devSkills: [ 'HTML','CSS','Javascript','Vue','Bootstrap','SQL','GIT','Python'],
-    otherSkills: [ 'English','Canva','Figma','Ms.Excel','Ms.Power Point'],
+    devSkills: [ 'HTML','CSS','Javascript','Vue','Bootstrap','SQL','GIT','Python', 'Django'],
+    otherSkills: [ 'English','Canva','Figma','Ms.Excel','Ms.Power Point', 'Ms.Word'],
     projects: [
       {
         title: 'QuranOnline',
@@ -23,6 +23,12 @@ export default createStore({
         desc: "This little game is my first website using Vue. Test how fast is your reaction. My best time is 0.358 second, let's see if you could beat it! ",
         link: 'https://fun-reaction-game.netlify.app/',
         pic: 'project3.png'
+      },
+      {
+        title: 'Personal Website',
+        desc: "You are currently looking at the website. it's a simple personal website built using Vue, Vuex library, vanilla CSS and HTML.",
+        link: '',
+        pic: 'project4.png'
       },
     ]
   },
