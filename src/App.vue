@@ -258,6 +258,7 @@ input:checked + .slider:before {
 
   #nav {
     margin: 20px 10px;
+    padding: 10px;
     height: 50px;
   }
 
