@@ -6,7 +6,7 @@
         <h1>gresiandra <br> putra.</h1>
         <p>{{ $store.state.summary }}</p>
         <div class="clickables">
-          <button><a href="/cv.pdf" download>Get CV</a></button>
+          <button><a :href="getPdf($store.state.fileCv)" download>Get CV</a></button>
           <div class="links">
             <a href="https://www.linkedin.com/in/gresiandra-putra-972b4120" target="_blank" title="LinkedIn"><box-icon type='logo' name='linkedin-square'></box-icon></a>
             <a href="https://github.com/gresiandra" target="_blank"><box-icon name='github' type='logo' title="Github"></box-icon></a>
@@ -22,6 +22,11 @@
 
 export default {
   name: 'Home',
+  methods: {
+    getPdf(file) {
+      return require('../assets/'+file)
+    }
+  }
 }
 </script>
 

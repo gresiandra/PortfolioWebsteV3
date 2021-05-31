@@ -5,6 +5,7 @@ export default createStore({
     summary: 'Hello! I’m a Web Developer from & living in Indonesia. Specializing in Front-End Development side using some of the latest technology including Vue.js',
     devSkills: [ 'HTML','CSS','Javascript','Vue','Bootstrap','SQL','GIT','Python', 'Django'],
     otherSkills: [ 'English','Canva','Figma','Ms.Excel','Ms.Power Point', 'Ms.Word'],
+    fileCv: 'CV.jpg',
     projects: [
       {
         title: 'QuranOnline',
