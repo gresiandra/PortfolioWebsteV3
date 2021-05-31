@@ -46,6 +46,7 @@ export default {
     font-size: ;
     font-weight: 500;
     color: var(--secondary);
+    transition: all 0.4s ease;
   }
 
   .skills .others h1 {
@@ -66,20 +67,14 @@ export default {
 
   .skills .development .devSkills p,
   .skills .others .otherSkills p {
-    background: var(--primary);
-    border: 1px solid var(--ternary);
+    background: var(--ternary);
     color: var(--secondary);
-    font-weight: 300;
+    font-weight: 400;
     padding: 10px 20px;
     margin: 10px 5px;
     border-radius: 20px;
-  }
-
-  .skills .development .devSkills p:hover,
-  .skills .others .otherSkills p:hover {
-    background: var(--ternary);
+    box-shadow: 5px 5px 5px rgba(66, 184, 131, 0.2);
     transition: all 0.4s ease;
-    font-weight: 500;
   }
 
   @media screen and (max-width: 500px) {

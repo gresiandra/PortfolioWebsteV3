@@ -55,7 +55,7 @@ export default {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 0 30px;
+    padding: 0 20px;
     color: var(--secondary)
   }
 
@@ -64,14 +64,16 @@ export default {
     font-size: 60px;
     text-align: left;
     margin-bottom: 30px;
+    transition: all 0.4s ease;
   }
 
   .content .descriptions p {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
     text-align: left;
     margin-bottom: 20px;
     line-height: 30px;
+    transition: all 0.4s ease;
   }
 
   .content .descriptions .clickables {
@@ -93,9 +95,15 @@ export default {
     margin-right: 20px;
   }
 
+  .content .descriptions .clickables button:hover {
+    transform: translateY(2px);
+    transition: all 0.4s ease;
+  }
+
   .content .descriptions .clickables button a{
     text-decoration: none;
     color: var(--secondary);
+    transition: all 0.4s ease;
   }
 
   .content .descriptions .clickables .links {
@@ -109,6 +117,13 @@ export default {
     height: 35px;
     margin: 0 10px;
   }
+  
+  .content .descriptions .clickables box-icon[name="linkedin-square"]:hover, 
+  .content .descriptions .clickables box-icon[name="github"]:hover, 
+  .content .descriptions .clickables box-icon[name="link"]:hover {
+    transform: translateY(2px);
+    transition: all 0.3s ease;
+  }
 
   @media screen and (max-width: 1000px) {
     .home {
@@ -118,26 +133,30 @@ export default {
 
   @media screen and (max-width: 850px) {
 
+    .home {
+      padding: 50px 50px;
+    }
+
     .content .descriptions h1 {
-      font-size: 56px;
+      font-size: 52px;
     }
 
     .content .descriptions p {
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .content .img {
-      width: 140%;
+      width: 120%;
     }
 
     .content .descriptions {
-      width: 60%;
+      width: 80%;
     }
 
     .content .descriptions .clickables box-icon[name="linkedin-square"], 
     .content .descriptions .clickables box-icon[name="github"], 
-    .content .descriptions .clickables box-icon[name="instagram"] {
-      margin: 0;
+    .content .descriptions .clickables box-icon[name="link"] {
+      margin: 5px;
     }
   }
 
@@ -171,7 +190,7 @@ export default {
     }
 
     .content .descriptions p {
-      font-size: 16px;
+      font-size: 15px;
       text-align: center;
     }
 
