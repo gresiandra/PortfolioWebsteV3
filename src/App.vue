@@ -214,7 +214,7 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #42b883;
+  background-color: var(--ternary);
 }
 
 input:checked + .slider:before {

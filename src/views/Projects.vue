@@ -1,22 +1,14 @@
 <template>
   <div class="projects">
     <div class="project-wrapper">
-      <div class="content-wrapper" v-for="pic in $store.state.pics">
-        <img :src="getPicture(pic)" :alt="pic">
+      <div class="content-wrapper" v-for="project in $store.state.projects" :key="project.title">
+        <img :src="getPicture(project.pic)" :alt="project.pic">
         <div class="text-wrapper">
-          <h2 class="title">QuranOnline</h2>
-          <p class="desc">Holy Quran in online form! now you can recite Al-Quran anytime and anywhere you go without bringing the actual book. Written using vanilla javascript.</p>
-          <a href="https://gresiandra.github.io/QuranOnline/" target="_blank" class="goto">Visit Website</a>
+          <h2 class="title">{{ project.title }}</h2>
+          <p class="desc">{{ project.desc }}</p>
+          <a :href="project.link" target="_blank" class="goto">Visit Website</a>
         </div>
       </div>
-      <!-- <div class="content-wrapper1">
-        <img src="../assets/project2.png" alt="">
-        <div class="text-wrapper">
-          <h2 class="title">Covid Case Tracker</h2>
-          <p class="desc">Provide latest update of Covid cases in Indonesia. Equipped with a map for detail cases in each province. Written using Leaflet, Bootstrap and Django.</p>
-          <a href="https://covid-indo.herokuapp.com/" target="_blank" class="goto">Visit Website</a>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -51,23 +43,17 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
 
-  /* .projects .project-wrapper .content-wrapper1 {
-    display: flex;
-    justify-content: center;
+  .projects .project-wrapper .content-wrapper:nth-child(2) {
     flex-direction: row-reverse;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 70px;
-  } */
+    margin-bottom: 120px;
+  }
 
   .projects .project-wrapper img {
     min-width: 300px;
     height: 280px;
-    padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(37, 34, 34, 0.4);
   }
@@ -88,6 +74,7 @@ export default {
     font-size: 24px;
     font-weight: 500;
     text-align: left;
+    line-height: 22px;
     color: var(--secondary);
     margin-bottom: 15px;
   }
@@ -105,8 +92,8 @@ export default {
   }
 
   @media screen and (max-width: 900px) {
-    .projects .project-wrapper .content-wrapper,
-    .projects .project-wrapper .content-wrapper1 {
+    .projects .project-wrapper .content-wrapper:nth-child(2),
+    .projects .project-wrapper .content-wrapper {
       flex-direction: column;
       margin-bottom: 0;
     }
@@ -120,6 +107,8 @@ export default {
       margin-left: 0;
       justify-content: flex-start;
       margin-top: 20px;
+      margin-bottom: 80px;
+      height: 100%;
     }
 
     .projects .project-wrapper .text-wrapper .title, 
@@ -143,10 +132,6 @@ export default {
 
     .projects .project-wrapper img {
       height: 220px;
-    }
-
-    .projects .project-wrapper .text-wrapper {
-      padding: 5px;
     }
   }
 
