@@ -6,7 +6,7 @@
         <h1>gresiandra <br> putra.</h1>
         <p>{{ $store.state.summary }}</p>
         <div class="clickables">
-          <button><a href="../assets/CV-small.pdf" download>Get CV</a></button>
+          <button><a href="/cv.pdf" download>Get CV</a></button>
           <div class="links">
             <a href="https://www.linkedin.com/in/gresiandra-putra-972b4120" target="_blank" title="LinkedIn"><box-icon type='logo' name='linkedin-square'></box-icon></a>
             <a href="https://github.com/gresiandra" target="_blank"><box-icon name='github' type='logo' title="Github"></box-icon></a>
@@ -105,6 +105,8 @@ export default {
     text-decoration: none;
     color: var(--secondary);
     transition: all 0.4s ease;
+    border: 1px solid black;
+    padding: 10px 25px;
   }
 
   .content .descriptions .clickables .links {
