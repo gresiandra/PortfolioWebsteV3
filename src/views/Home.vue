@@ -31,7 +31,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 75vh;
+    min-height: 75vh;
     padding: 50px 150px;
   }
 
@@ -41,10 +41,11 @@ export default {
     align-items: center;
     width: 100%;
     height: 370px;
+    margin-top: 30px;
   }
 
   .content .img {
-    width: 90%;
+    width: 85%;
     height: 100%;
     background: url('../assets/me.png') no-repeat center;
     background-size: cover;
@@ -131,40 +132,10 @@ export default {
     }
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 800px) {
 
     .home {
-      padding: 50px 50px;
-    }
-
-    .content .descriptions h1 {
-      font-size: 52px;
-    }
-
-    .content .descriptions p {
-      font-size: 15px;
-    }
-
-    .content .img {
-      width: 120%;
-    }
-
-    .content .descriptions {
-      width: 80%;
-    }
-
-    .content .descriptions .clickables box-icon[name="linkedin-square"], 
-    .content .descriptions .clickables box-icon[name="github"], 
-    .content .descriptions .clickables box-icon[name="mail-send"] {
-      margin: 5px;
-    }
-  }
-
-  @media screen and (max-width: 670px) {
-    .home {
-      margin-top: 50px;
-      padding: 50px 20px;
-      min-height: 100vh;
+      padding: 20px 70px 50px;
     }
 
     .content {
@@ -184,13 +155,13 @@ export default {
     }
 
     .content .descriptions h1 {
-      font-size: 48px;
+      font-size: 52px;
       text-align: center;
       text-transform: capitalize;
     }
 
     .content .descriptions p {
-      font-size: 15px;
+      font-size: 16px;
       text-align: center;
     }
 
@@ -214,9 +185,33 @@ export default {
     }
   }
 
+  @media screen and (max-width: 670px) {
+    .home {
+      padding: 50px 50px;
+      min-height: 100vh;
+    }
+  }
+
   @media screen and (max-width: 500px) {
+    .home {
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
+    .content .descriptions h1 {
+      font-size: 45px;
+    }
+
     .content .img {
       max-height: 250px;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    .home {
+      margin-top: 10px;
     }
   }
 

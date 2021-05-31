@@ -1,25 +1,35 @@
 <template>
   <div class="projects">
     <div class="project-wrapper">
-      <div class="content-wrapper">
-        <img src="../assets/project1.png" alt="">
+      <div class="content-wrapper" v-for="pic in $store.state.pics">
+        <img :src="getPicture(pic)" :alt="pic">
         <div class="text-wrapper">
-          <h2 class="title">Title</h2>
-          <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, explicabo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim illum unde iure explicabo incidunt id.</p>
-          <a href="" class="goto">Interactive Demo</a>
+          <h2 class="title">QuranOnline</h2>
+          <p class="desc">Holy Quran in online form! now you can recite Al-Quran anytime and anywhere you go without bringing the actual book. Written using vanilla javascript.</p>
+          <a href="https://gresiandra.github.io/QuranOnline/" target="_blank" class="goto">Visit Website</a>
         </div>
       </div>
-      <div class="content-wrapper1">
+      <!-- <div class="content-wrapper1">
         <img src="../assets/project2.png" alt="">
         <div class="text-wrapper">
-          <h2 class="title">Title</h2>
-          <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, explicabo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim illum unde iure explicabo incidunt id.</p>
-          <a href="" class="goto">Interactive Demo</a>
+          <h2 class="title">Covid Case Tracker</h2>
+          <p class="desc">Provide latest update of Covid cases in Indonesia. Equipped with a map for detail cases in each province. Written using Leaflet, Bootstrap and Django.</p>
+          <a href="https://covid-indo.herokuapp.com/" target="_blank" class="goto">Visit Website</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    getPicture(pic) {
+      return require('../assets/'+pic)
+    }
+  }
+}
+</script>
 
 <style>
   .projects {
@@ -28,13 +38,11 @@
     width: 100%;
     min-height: 75vh;
     padding: 50px 150px;
-    /* border: 1px solid black; */
   }
 
   .projects .project-wrapper {
     width: 100%;
     min-height: 500px;
-    /* border: 1px solid black; */
   }
 
   .projects .project-wrapper .content-wrapper {
@@ -44,10 +52,9 @@
     width: 100%;
     height: 100%;
     margin-bottom: 100px;
-    /* border: 1px solid black; */
   }
 
-  .projects .project-wrapper .content-wrapper1 {
+  /* .projects .project-wrapper .content-wrapper1 {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -55,8 +62,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 70px;
-    /* border: 1px solid black; */
-  }
+  } */
 
   .projects .project-wrapper img {
     min-width: 300px;
@@ -64,7 +70,6 @@
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(37, 34, 34, 0.4);
-    /* border: 1px solid green; */
   }
 
   .projects .project-wrapper .text-wrapper {
@@ -75,7 +80,6 @@
     height: 280px;
     padding: 15px;
     margin-left: 20px;
-    /* border: 1px solid blue; */
   }
 
   .projects .project-wrapper .text-wrapper .title, 

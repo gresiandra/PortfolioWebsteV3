@@ -2,7 +2,6 @@
   <div id="overlayMenu">
     <div class="menuResponsive">
       <router-link @click="showMenu" :to="{ name: 'Home' }">Home</router-link>
-      <router-link @click="showMenu" :to="{ name: 'About' }">About</router-link>
       <router-link @click="showMenu" :to="{ name: 'Projects' }">Projects</router-link>
       <router-link @click="showMenu" :to="{ name: 'Skills' }">Skills</router-link>
     </div>
@@ -13,7 +12,6 @@
     </div>
     <div class="menu">
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'About' }">About</router-link>
       <router-link :to="{ name: 'Projects' }">Projects</router-link>
       <router-link :to="{ name: 'Skills' }">Skills</router-link>
     </div>
@@ -68,10 +66,7 @@ export default {
 
 <style>
 #app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #overlayMenu {
@@ -119,11 +114,14 @@ export default {
 }
 
 #nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 50px;
-  height: 50px;
+  padding: 30px 50px;
+  height: 100px;
+  background: var(--primary);
 }
 
 #nav .menu {
@@ -236,11 +234,11 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 850px) {
   #nav {
-    margin: 30px;
+    padding: 30px;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   #nav .menu {
     display: none;
   }
@@ -259,7 +257,8 @@ input:checked + .slider:before {
   }
 
   #nav {
-    margin: 20px 20px;
+    margin: 20px 10px;
+    height: 50px;
   }
 
   #nav .toggle .moon {
