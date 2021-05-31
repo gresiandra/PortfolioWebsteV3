@@ -105,7 +105,6 @@ export default {
     text-decoration: none;
     color: var(--secondary);
     transition: all 0.4s ease;
-    border: 1px solid black;
     padding: 10px 25px;
   }
 
