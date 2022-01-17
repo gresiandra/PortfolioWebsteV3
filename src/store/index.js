@@ -5,7 +5,7 @@ export default createStore({,
     summary: 'Hello! I’m Gresiandra Putra from Samarinda. Currently working at Indomaret Group as an Inventory Control Supervisor',
     devSkills: [ 'HTML','CSS','Javascript','Bootstrap','SQL','GIT','Python'],
     otherSkills: [ 'English','Data Analisys','Data Entry','Figma','Ms.Excel'],
-    fileCv: 'CV.jpg',
+    fileCv: 'CV.png',
     projects: [
       {
         title: 'QuranOnline',
