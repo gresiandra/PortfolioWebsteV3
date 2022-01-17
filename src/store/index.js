@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+export default createStore({,
   state: {
     summary: 'Hello! I’m Gresiandra Putra from Samarinda. Currently working at Indomaret Group as an Inventory Control Supervisor',
     devSkills: [ 'HTML','CSS','Javascript','Bootstrap','SQL','GIT','Python'],
