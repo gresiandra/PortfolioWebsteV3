@@ -2,9 +2,9 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    summary: 'Hello! I’m a Web Developer from & living in Indonesia. Specializing in Front-End Development side using some of the latest technology including Vue.js',
-    devSkills: [ 'HTML','CSS','Javascript','Vue','Bootstrap','SQL','GIT','Python', 'Django'],
-    otherSkills: [ 'English','Canva','Figma','Ms.Excel','Ms.Power Point', 'Ms.Word'],
+    summary: 'Hello! I’m Gresiandra Putra. Currently working at Indomaret Group as Inventory Control Supervisor',
+    devSkills: [ 'HTML','CSS','Javascript','Bootstrap','SQL','GIT','Python'],
+    otherSkills: [ 'English','Data Analisys','Data Entry','Figma','Ms.Excel','Ms.Power Point', 'Ms.Word'],
     fileCv: 'CV.jpg',
     projects: [
       {
